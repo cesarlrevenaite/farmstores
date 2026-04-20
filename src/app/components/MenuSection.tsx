@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import circularLogo from '@/assets/logo.png';
+import circularLogo from 'figma:asset/3c30db4d10ea472cad61b4359005f3cc5fd051ff.png';
 
 const menuData = [
   {
@@ -12,7 +12,7 @@ const menuData = [
   },
   {
     category: "Dairy Products",
-    description: "Need to pick up some milk or eggs on the way home? Make Farm Stores your last stop! We have the freshest dairy products ready and available – we'll bring them right to your car!",
+    description: "Need to pick up some milk or eggs on the way home? Make Farm Stores your last stop! We have the freshest dairy products ready and available – we’ll bring them right to your car!",
     items: ["Farm Store Milk", "Farm Store Ice Cream", "Farm Store Eggnog", "Butter", "Cheese", "Eggs"]
   },
   {
@@ -22,17 +22,17 @@ const menuData = [
   },
   {
     category: "Ready To Eat",
-    description: "When you've got a growling stomach or a backseat full of hungry kids, our ready-to-eat treats are a must! And they're always crowd pleasers. From fresh empanadas to hot soups, you won't find Farm Stores treats anywhere else!",
+    description: "When you’ve got a growling stomach or a backseat full of hungry kids, our ready-to-eat treats are a must! And they’re always crowd pleasers. From fresh empanadas to hot soups, you won’t find Farm Stores treats anywhere else!",
     items: ["Hot Soups", "Sandwiches", "Empanadas", "Gourmet Cheese Sticks (Tequeños)", "Ham & Cheese Sweet Buns", "Croquettes", "Deli Salads"]
   },
   {
     category: "Snacks",
-    description: "Need a quick pick-me-up? Drive through and grab a snack at Farm Stores! We have your favorite chips and candy in addition to freshly-baked cookies and soft-serve ice cream. For all the best treats, you can't beat Farm Stores!",
+    description: "Need a quick pick-me-up? Drive through and grab a snack at Farm Stores! We have your favorite chips and candy in addition to freshly-baked cookies and soft-serve ice cream. For all the best treats, you can’t beat Farm Stores!",
     items: ["Hot Cookies", "Chips", "Candy"]
   },
   {
     category: "Grocery",
-    description: "Farm Stores is your one stop to stock up on all the grocery essentials. From dried goods like cereal and coffee to deli meat and frozen items, if you can find it at the grocery store, chances are you'll find it at Farm Stores too!",
+    description: "Farm Stores is your one stop to stock up on all the grocery essentials. From dried goods like cereal and coffee to deli meat and frozen items, if you can find it at the grocery store, chances are you’ll find it at Farm Stores too!",
     items: ["Cereals", "Coffee, Sugar, and Cream", "Lunchables", "Sliced Meats & Cheese", "& more!"]
   },
   {
@@ -53,14 +53,14 @@ export function MenuSection() {
   return (
     <section id="menu" className="py-24 bg-white text-black overflow-hidden relative">
       <div className="absolute top-20 right-10 opacity-[0.03] pointer-events-none w-96 h-96">
-        <ImageWithFallback
-          src={circularLogo}
-          alt=""
+        <ImageWithFallback 
+          src={circularLogo} 
+          alt="" 
           className="w-full h-full object-contain"
         />
       </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -75,7 +75,7 @@ export function MenuSection() {
 
         <div className="space-y-4">
           {menuData.map((section, idx) => (
-            <motion.div
+            <motion.div 
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export function MenuSection() {
               transition={{ delay: idx * 0.1 }}
               className="border border-black/10 rounded-xl overflow-hidden shadow-sm"
             >
-              <button
+              <button 
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 className="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors"
               >
@@ -94,7 +94,7 @@ export function MenuSection() {
                   {openIndex === idx ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
                 </span>
               </button>
-
+              
               <AnimatePresence>
                 {openIndex === idx && (
                   <motion.div

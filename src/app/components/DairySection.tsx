@@ -9,8 +9,8 @@ export function DairySection() {
     <section className="py-24 bg-gray-50 text-black overflow-hidden border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col-reverse lg:flex-row-reverse items-center gap-16">
-
-          <motion.div
+          
+          <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -39,7 +39,7 @@ export function DairySection() {
             </Link>
           </motion.div>
 
-          <motion.div
+          <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -47,9 +47,9 @@ export function DairySection() {
             className="w-full lg:w-1/2 relative"
           >
             <div className="absolute inset-0 bg-red-600 rounded-full -translate-x-8 -translate-y-4 opacity-20 blur-2xl" />
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1552593050-477020c5af3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMGRhaXJ5JTIwcHJvZHVjdHMlMjBtaWxrJTIwZWdnc3xlbnwxfHx8fDE3NzYyODA5MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Fresh Dairy Products"
+            <ImageWithFallback 
+              src="https://images.unsplash.com/photo-1552593050-477020c5af3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMGRhaXJ5JTIwcHJvZHVjdHMlMjBtaWxrJTIwZWdnc3xlbnwxfHx8fDE3NzYyODA5MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
+              alt="Fresh Dairy Products" 
               className="relative rounded-t-full rounded-b-3xl object-cover w-full h-[600px] shadow-2xl border-4 border-black"
             />
           </motion.div>

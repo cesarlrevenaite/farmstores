@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import logoImage from '@/assets/logo-white.png';
+import logoImage from 'figma:asset/f0867dbc1cceba68a4f63ea9911f773df70a7e81.png';
 
 export function LicenseSection() {
   return (
     <section id="license" className="py-24 bg-black text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -15,9 +15,9 @@ export function LicenseSection() {
           className="text-center mb-16"
         >
           <div className="bg-white p-4 rounded-3xl inline-flex mb-8 shadow-[0_0_30px_rgba(255,0,0,0.3)] border-2 border-red-600/50">
-            <ImageWithFallback
-              src={logoImage}
-              alt="Farm Stores Logo"
+            <ImageWithFallback 
+              src={logoImage} 
+              alt="Farm Stores Logo" 
               className="w-32 h-auto object-contain"
             />
           </div>
@@ -29,7 +29,7 @@ export function LicenseSection() {
           </p>
         </motion.div>
 
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}

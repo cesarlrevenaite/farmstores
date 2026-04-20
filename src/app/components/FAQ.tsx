@@ -8,7 +8,7 @@ export function FAQ() {
     },
     {
       question: "What products does Farm Stores carry?",
-      answer: "We carry absolutely all of the household and grocery essentials you might need. From fresh milk and eggs to fresh produce and a variety of frozen items, chances are you'll find it at Farm Stores. We also offer unique Farm Stores® brand products and ready-to-eat hot snacks you won't find anywhere else!"
+      answer: "We carry absolutely all of the household and grocery essentials you might need. From fresh milk and eggs to fresh produce and a variety of frozen items, chances are you’ll find it at Farm Stores. We also offer unique Farm Stores® brand products and ready-to-eat hot snacks you won’t find anywhere else!"
     },
     {
       question: "What forms of payment are accepted?",

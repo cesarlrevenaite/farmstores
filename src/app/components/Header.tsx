@@ -3,7 +3,7 @@ import { MapPin } from 'lucide-react';
 import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 import { Link } from 'react-router';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import logoImage from '@/assets/logo.png';
+import logoImage from 'figma:asset/3c30db4d10ea472cad61b4359005f3cc5fd051ff.png';
 
 export function Header() {
   const { scrollY } = useScroll();
@@ -19,7 +19,7 @@ export function Header() {
   });
 
   return (
-    <motion.header
+    <motion.header 
       initial={{ y: '-100%' }}
       animate={{ y: hidden ? '-100%' : '0%' }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -32,14 +32,14 @@ export function Header() {
               whileHover={{ scale: 1.1, rotate: 3 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <ImageWithFallback
-                src={logoImage}
-                alt="Farm Stores Logo"
-                className="h-20 w-auto drop-shadow-sm mix-blend-multiply"
+              <ImageWithFallback 
+                src={logoImage} 
+                alt="Farm Stores Logo" 
+                className="h-20 w-auto drop-shadow-sm mix-blend-multiply" 
               />
             </motion.div>
           </Link>
-
+          
           <nav className="hidden md:flex items-center gap-8">
             <Link to="/#order" className="text-sm font-bold text-gray-800 hover:text-red-600 transition-colors uppercase tracking-widest">Order Now</Link>
             <Link to="/#menu" className="text-sm font-bold text-gray-800 hover:text-red-600 transition-colors uppercase tracking-widest">Menu</Link>

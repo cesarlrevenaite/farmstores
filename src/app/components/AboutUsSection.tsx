@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import circularLogo from '@/assets/logo.png';
-import vintageHistoryImage from '@/assets/vintage-history.png';
+import circularLogo from 'figma:asset/3c30db4d10ea472cad61b4359005f3cc5fd051ff.png';
+import vintageHistoryImage from 'figma:asset/9c9aaa7e039e74747f94438077e85ccadc5d6cb4.png';
 
 export function AboutUsSection() {
   return (
     <section id="about" className="py-32 bg-red-600 text-white overflow-hidden relative">
-      <div
+      <div 
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)',
@@ -16,17 +16,17 @@ export function AboutUsSection() {
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          <motion.div
+          <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
             className="w-full lg:w-1/2"
           >
-            <div className="bg-white text-black rounded-full inline-flex mb-8 shadow-xl border-4 border-black overflow-hidden items-center justify-center w-28 h-28">
-              <ImageWithFallback
-                src={circularLogo}
-                alt="Bakery Grocery Cafe"
+            <div className="bg-white text-black rounded-full inline-flex mb-8 shadow-xl border-4 border-black overflow-hidden flex items-center justify-center w-28 h-28">
+              <ImageWithFallback 
+                src={circularLogo} 
+                alt="Bakery Grocery Cafe" 
                 className="w-[85%] h-[85%] object-contain"
               />
             </div>
@@ -45,7 +45,7 @@ export function AboutUsSection() {
               </p>
             </div>
           </motion.div>
-          <motion.div
+          <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -53,9 +53,9 @@ export function AboutUsSection() {
             className="w-full lg:w-1/2 relative"
           >
             <div className="absolute inset-0 bg-black translate-x-4 translate-y-4 opacity-50 blur-xl rounded-3xl" />
-            <ImageWithFallback
-              src={vintageHistoryImage}
-              alt="Farm Stores History"
+            <ImageWithFallback 
+              src={vintageHistoryImage} 
+              alt="Farm Stores History" 
               className="relative rounded-3xl object-cover w-full h-[600px] shadow-2xl border-8 border-black"
             />
           </motion.div>

@@ -2,20 +2,20 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Facebook, Instagram } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import logoImage from '@/assets/logo-white.png';
+import logoImage from 'figma:asset/f0867dbc1cceba68a4f63ea9911f773df70a7e81.png';
 
 export function Footer() {
   return (
     <footer id="contact" className="bg-black text-gray-300 py-20 border-t-[12px] border-red-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 md:gap-12">
-
+          
           <div className="col-span-1 md:col-span-1">
             <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 mb-8 hover:opacity-80 transition-opacity">
-              <ImageWithFallback
-                src={logoImage}
-                alt="Farm Stores Logo"
-                className="w-48 h-auto drop-shadow-[0_0_15px_rgba(255,0,0,0.5)] bg-white/5 p-4 rounded-xl backdrop-blur-sm"
+              <ImageWithFallback 
+                src={logoImage} 
+                alt="Farm Stores Logo" 
+                className="w-48 h-auto drop-shadow-[0_0_15px_rgba(255,0,0,0.5)] bg-white/5 p-4 rounded-xl backdrop-blur-sm" 
               />
             </Link>
             <p className="text-base text-gray-400 mb-8 leading-relaxed font-medium">
@@ -45,6 +45,7 @@ export function Footer() {
           </div>
 
           <div className="hidden md:block">
+            {/* Empty column for spacing as per original layout but without the second headquarters */}
           </div>
 
           <div>
@@ -59,7 +60,7 @@ export function Footer() {
           </div>
 
         </div>
-
+        
         <div className="mt-20 pt-8 border-t border-white/10 text-center text-sm text-gray-500 font-medium">
           <p>&copy; {new Date().getFullYear()} Farm Stores. All Rights Reserved.</p>
         </div>

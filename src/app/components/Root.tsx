@@ -7,6 +7,7 @@ import { Footer } from './Footer';
 export function Root() {
   const location = useLocation();
 
+  // Handle smooth scroll to hash links when navigation happens
   useEffect(() => {
     if (location.hash) {
       setTimeout(() => {
@@ -15,7 +16,7 @@ export function Root() {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 300);
+      }, 300); // Wait for page transition
     } else {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }

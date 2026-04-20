@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@400;500;600;700&display=swap');
 
+/* Additional typography utility classes */
 @layer utilities {
   .font-heading {
     font-family: 'Oswald', sans-serif;

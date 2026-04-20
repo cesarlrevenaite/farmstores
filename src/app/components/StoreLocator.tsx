@@ -55,8 +55,8 @@ export function StoreLocator() {
   const filteredStores = useMemo(() => {
     if (!searchTerm) return storesData;
     const lowerSearch = searchTerm.toLowerCase();
-    return storesData.filter(store =>
-      store.city.toLowerCase().includes(lowerSearch) ||
+    return storesData.filter(store => 
+      store.city.toLowerCase().includes(lowerSearch) || 
       store.address.toLowerCase().includes(lowerSearch) ||
       store.zip.includes(lowerSearch)
     );
@@ -66,12 +66,14 @@ export function StoreLocator() {
     setSelectedStore(store);
   }, []);
 
-  const mapQuery = selectedStore
+  // Determine what to show on the map
+  const mapQuery = selectedStore 
     ? `${selectedStore.address}, ${selectedStore.city}, ${selectedStore.state} ${selectedStore.zip}`
     : searchTerm ? `${searchTerm}, Florida` : "Farm Stores, Florida";
-
+  
   const mapZoom = selectedStore ? 15 : searchTerm ? 11 : 7;
-
+  
+  // This generates a generic Google Maps embed URL without requiring an API key
   const iframeSrc = `https://maps.google.com/maps?q=${encodeURIComponent(mapQuery)}&t=&z=${mapZoom}&ie=UTF8&iwloc=&output=embed`;
 
   return (
@@ -84,7 +86,7 @@ export function StoreLocator() {
             </h1>
             <p className="text-gray-400 mt-1">Discover a Farm Stores near you.</p>
           </div>
-
+          
           <div className="relative w-full md:w-96">
             <input
               type="text"
@@ -102,13 +104,14 @@ export function StoreLocator() {
       </div>
 
       <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
+        {/* Store List */}
         <div className="w-full md:w-[400px] lg:w-[450px] bg-white border-r border-gray-200 overflow-y-auto shrink-0 flex flex-col">
           <div className="p-4 bg-gray-50 border-b border-gray-200 text-sm font-semibold text-gray-500 uppercase tracking-wider">
             {filteredStores.length} {filteredStores.length === 1 ? 'Location' : 'Locations'} Found
           </div>
           <div className="flex-1">
             {filteredStores.map((store) => (
-              <div
+              <div 
                 key={store.id}
                 onClick={() => handleStoreClick(store)}
                 className={`p-5 border-b border-gray-100 cursor-pointer transition-all hover:bg-gray-50 ${selectedStore?.id === store.id ? 'bg-red-50/50 border-l-4 border-l-red-600' : 'border-l-4 border-l-transparent'}`}
@@ -124,7 +127,7 @@ export function StoreLocator() {
                 <p className="text-gray-600 mb-3 text-sm">
                   {store.city}, {store.state} {store.zip}
                 </p>
-
+                
                 <div className="flex items-center gap-4 text-sm text-gray-500">
                   <div className="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-md">
                     <span className="font-medium text-gray-700">{store.type}</span>
@@ -135,12 +138,12 @@ export function StoreLocator() {
                 </div>
 
                 {selectedStore?.id === store.id && (
-                  <motion.div
+                  <motion.div 
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     className="mt-4 pt-4 border-t border-gray-200/60 flex gap-3"
                   >
-                    <a
+                    <a 
                       href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${store.address}, ${store.city}, ${store.state} ${store.zip}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -164,9 +167,10 @@ export function StoreLocator() {
           </div>
         </div>
 
+        {/* Map Area - Using a simple iframe embed to avoid API keys and deprecation errors */}
         <div className="flex-1 bg-gray-200 relative">
           <div className="absolute top-4 right-4 z-10">
-            <a
+            <a 
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -176,13 +180,13 @@ export function StoreLocator() {
               Open in Google Maps
             </a>
           </div>
-          <iframe
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            scrolling="no"
-            marginHeight={0}
-            marginWidth={0}
+          <iframe 
+            width="100%" 
+            height="100%" 
+            frameBorder="0" 
+            scrolling="no" 
+            marginHeight={0} 
+            marginWidth={0} 
             src={iframeSrc}
             title="Google Maps Overview"
             className="w-full h-full border-0"

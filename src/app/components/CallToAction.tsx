@@ -6,14 +6,14 @@ import { MapPin, Briefcase } from 'lucide-react';
 export function CallToAction() {
   return (
     <section className="relative py-32 bg-red-600 overflow-hidden text-white">
-      <div
+      <div 
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)',
           backgroundSize: '24px 24px'
         }}
       />
-
+      
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -25,7 +25,7 @@ export function CallToAction() {
             Always Fast. <br />
             <span className="text-black drop-shadow-lg">Always Fresh.</span>
           </h2>
-
+          
           <p className="text-2xl text-red-50 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
             Drive-Thru Today! Experience the ultimate convenience. We bring the store to your car door.
           </p>

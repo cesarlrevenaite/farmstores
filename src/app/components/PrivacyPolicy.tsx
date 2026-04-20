@@ -8,12 +8,12 @@ export function PrivacyPolicy() {
           <h1 className="font-['Oswald',sans-serif] text-4xl md:text-5xl font-bold uppercase tracking-tight mb-8">
             Privacy <span className="text-red-600">Policy</span>
           </h1>
-
+          
           <div className="space-y-8 text-gray-600 leading-relaxed">
             <p>
               At Farm Stores, we are committed to protecting your privacy. We developed this Privacy Policy to share with you our information collection practices and the options you have when visiting our Web site. You can always be assured the information we collect is used to provide a more personalized experience for users of this site. By using this site, you are agreeing to accept the practices described in this Privacy Policy.
             </p>
-
+            
             <p>
               Please note that the other Farm Stores Web sites may be governed by separate policies. When visiting any of our other sites, please refer to its Terms of Use.
             </p>
@@ -32,7 +32,7 @@ export function PrivacyPolicy() {
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Your business contact details (such as your name, company, address and alternate contact) – to help us respond to your business inquiry</li>
-                <li>Your company's basic background information (such as areas of focus, history, and gross annual sales) – to help us forward your information to the appropriate department and to better understand your company's capabilities and product offerings</li>
+                <li>Your company’s basic background information (such as areas of focus, history, and gross annual sales) – to help us forward your information to the appropriate department and to better understand your company’s capabilities and product offerings</li>
                 <li>Information associated with certain electronic documents – to help you pre-qualify for potentially participating in a category review and/or conducting business with us</li>
               </ul>
             </section>
@@ -47,7 +47,7 @@ export function PrivacyPolicy() {
             <section>
               <h2 className="font-['Oswald',sans-serif] text-2xl font-bold uppercase tracking-wide text-black mb-4">Cookies</h2>
               <p>
-                By use of this site, you consent to our use of cookies. A {"\u201C"}cookie{"\u201D"} is a piece of data stored on your hard drive containing information about you. Usage of a cookie is in no way linked to any personally identifiable information while on our Web site. Cookies do not contain any registration information that would personally identify you, as all such data is kept behind our firewall. Nor do cookies allow us to track your usage of other Web sites or the Internet in general.
+                By use of this site, you consent to our use of cookies. A “cookie” is a piece of data stored on your hard drive containing information about you. Usage of a cookie is in no way linked to any personally identifiable information while on our Web site. Cookies do not contain any registration information that would personally identify you, as all such data is kept behind our firewall. Nor do cookies allow us to track your usage of other Web sites or the Internet in general.
               </p>
             </section>
 
@@ -68,14 +68,14 @@ export function PrivacyPolicy() {
             <section>
               <h2 className="font-['Oswald',sans-serif] text-2xl font-bold uppercase tracking-wide text-black mb-4">Security</h2>
               <p>
-                Our site includes secured connections where users enter registration details. This means that information is encrypted before it is sent over the Internet between your computer and Farm Stores' computers. The technology used is called Secure Socket Layer (SSL). Your information is encrypted on your computer, sent through the Internet as jumbled code, and decoded on Farm Stores' secure server. You can verify that the connection is secure because you will see a key or a padlock at the bottom of your browser. Another identifier of a secure connection is the URL (or Web site address); the address will change from http://www.farmstores.com to https://www.farmstores.com when a secure connection is in place. Once your information arrives at Farm Stores, your information is stored in an encrypted file on a computer that is physically separated from the site's Internet connection by a firewall. This firewall is designed to protect information from unauthorized viewing, stealing, or access.
+                Our site includes secured connections where users enter registration details. This means that information is encrypted before it is sent over the Internet between your computer and Farm Stores’ computers. The technology used is called Secure Socket Layer (SSL). Your information is encrypted on your computer, sent through the Internet as jumbled code, and decoded on Farm Stores’ secure server. You can verify that the connection is secure because you will see a key or a padlock at the bottom of your browser. Another identifier of a secure connection is the URL (or Web site address); the address will change from http://www.farmstores.com to https://www.farmstores.com when a secure connection is in place. Once your information arrives at Farm Stores, your information is stored in an encrypted file on a computer that is physically separated from the site’s Internet connection by a firewall. This firewall is designed to protect information from unauthorized viewing, stealing, or access.
               </p>
             </section>
 
             <section>
               <h2 className="font-['Oswald',sans-serif] text-2xl font-bold uppercase tracking-wide text-black mb-4">Online Survey and Contests</h2>
               <p className="mb-4">
-                From time to time, Farm Stores or its affiliates may conduct online surveys that ask you for demographic data, such as your ZIP code, age, or income level. Farm Stores or Farm Stores' agents may also contact you by telephone with the option to participate in other consumer research studies. Participation in any survey or other consumer research is always voluntary. Farm Stores aggregates the responses we receive before using the information to improve the products and services we offer. We do not link your individual responses to your personal information at any time.
+                From time to time, Farm Stores or its affiliates may conduct online surveys that ask you for demographic data, such as your ZIP code, age, or income level. Farm Stores or Farm Stores’ agents may also contact you by telephone with the option to participate in other consumer research studies. Participation in any survey or other consumer research is always voluntary. Farm Stores aggregates the responses we receive before using the information to improve the products and services we offer. We do not link your individual responses to your personal information at any time.
               </p>
               <p>
                 Farm Stores may also offer contests that ask for some personal information, such as names and e-mail addresses, so that we can contact winners. All of these contests follow applicable federal and state laws. We will clearly post the rules and terms of each contest on our Web site.
@@ -109,7 +109,7 @@ export function PrivacyPolicy() {
                 Please let us know if you have any questions about our Privacy Policy. Simply send us an e-mail at <a href="mailto:info@farmstores.com" className="text-red-600 hover:text-red-700 font-bold transition-colors">info@farmstores.com</a>.
               </p>
             </section>
-
+            
             <div className="pt-8 border-t border-gray-200 mt-8 text-sm">
               <p className="font-bold text-gray-500 uppercase">COPYRIGHT NOTICE</p>
               <p>Copyright© 2022 Farm Stores, Inc. All rights reserved. Any rights not expressly granted herein are reserved.</p>
