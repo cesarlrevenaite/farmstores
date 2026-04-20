@@ -19,7 +19,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-['Oswald',sans-serif] font-bold uppercase tracking-tighter leading-[1.05] mb-10 drop-shadow-2xl text-[clamp(3rem,8vw,100px)] text-transparent bg-clip-text"
+          className="font-['Oswald',sans-serif] font-bold uppercase tracking-tighter leading-[1.05] mb-10 drop-shadow-2xl text-[100px] text-transparent bg-clip-text"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1617713965103-9fda56c89fad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jcmV0ZSUyMHRleHR1cmV8ZW58MXx8fHwxNzc1MDY4ODczfDA&ixlib=rb-4.1.0&q=80&w=1080')",
             backgroundSize: "cover",
